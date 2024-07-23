@@ -12,3 +12,4 @@ function kiratsAsyncFunction(){
     }
 
     main();
+    console.log("After main");
