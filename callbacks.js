@@ -24,3 +24,5 @@ return a+b;
  const value = calculateArithmetic(6,10,sum);
  console.log(value);
 
+
+ 
