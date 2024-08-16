@@ -13,6 +13,7 @@ const alluser=[{
 }]
 for(let i=0;i<=alluser.length;i++){
     if(alluser[i]["gender"]=="male"){
+        
         console.log(alluser[i]["firstname"]);
     }
 }
