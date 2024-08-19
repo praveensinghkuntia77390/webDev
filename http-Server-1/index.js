@@ -8,7 +8,13 @@ app.get("",(req,res)=>{
 app.get("/about",(req,res)=>{
     res.send(`
         <input type ="text" placeholder ="username"/>
-        <button>click here</button>`
+       <button>click here</button>`
+    )
+});
+app.get("/help",(req,res)=>{
+    res.send(`
+        <input type ="text" placeholder ="Get Help"/>
+       <button>click here</button>`
     )
 });
 app.listen(5000);
