@@ -1,5 +1,4 @@
 const express = require("express");
-
 const app = express();
 
 app.use(express.json());
@@ -12,6 +11,7 @@ app.use(express.json());
     res.send("You have " +kidneys+ " kidney ");
  })
 
+ //global catch
  app.use(function(err,req,res,next){
     res.json({
         msg:"Oops...! Something went wrong with the Server"
