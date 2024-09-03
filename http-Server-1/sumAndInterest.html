@@ -1,11 +1,19 @@
 <html>
     <script>
+        // let timeout=0;
+        function debounceInterestDiv(){
+         setTimeout(function(){
+                interestDiv()
+            },1000);
+           
+          
+        }
         async function interestDiv(){
             const a =document.getElementById("Principal").value;
             const b =document.getElementById("rate").value;
             const c =document.getElementById("time").value;
             //fetch
-            const response =await fetch("https://github.com/praveensinghkuntia77390/webDev/blob/main/http-Server-1/sumAndinterest.js/interest?principal="+ a +"&rate="+ b +"&time="+ c)
+            const response =await fetch("https://sum-server.100xdevs.com/interest?principal="+a+ "&rate="+b+"&time="+c)
             const ans = await response.text();
             document.getElementById("finalInterest").innerHTML=ans;
 
@@ -13,13 +21,11 @@
 
     </script>
     <br>
-        <input id="Principal" placeholder="Enter Principal Amount"></input>
+        <input oninput="debounceInterestDiv()" id="Principal" placeholder="Enter Principal Amount"></input>
         <br></br>
-        <input id="rate" placeholder="Enter rate"></input>
+        <input oninput="debounceInterestDiv()" id="rate" placeholder="Enter rate"></input>
         <br></br>
-        <input id="time" placeholder="Enter time in years"></input>
-        <br></br>
-        <button onclick="interestDiv()">Calculate Interest</button>
+        <input oninput="debounceInterestDiv()" id="time" placeholder="Enter time in years"></input>
         <br></br>
         <div id="finalInterest"></div>
     </body>
